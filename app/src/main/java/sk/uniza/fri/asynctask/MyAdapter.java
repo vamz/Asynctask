@@ -67,7 +67,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
             super(itemView);
 
             imageView = (ImageView) itemView.findViewById(R.id.imageView);
-            ;
+
             progressBar = (ProgressBar) itemView.findViewById(R.id.progressBar);
         }
     }

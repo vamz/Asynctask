@@ -16,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        //Inicializacia RecycleView prvku
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
@@ -23,6 +24,10 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(myAdapter);
     }
 
+    /**
+     *
+     * @return List vygenerovanych url adries s obrazkami
+     */
     private List<String> getUrls() {
         List<String> urls = new ArrayList<>();
         for (int i = 0; i < 50; i++) {
