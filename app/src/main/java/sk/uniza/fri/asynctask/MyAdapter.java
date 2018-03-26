@@ -20,6 +20,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
 
     private List<String> urlImage;
 
+    //TODO Vyskusajte si spustenie asynctask ulohy s roznymi typmi Executors
+    //ExecutorService executorService = Executors.newFixedThreadPool(4);
+
+    //ExecutorService executorService = Executors.newSingleThreadExecutor();
+
+    //ExecutorService executorService = Executors.newCachedThreadPool();
+
     public MyAdapter(List<String> urlImage) {
         this.urlImage = urlImage;
     }
@@ -37,17 +44,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         DownloadData downloadData = new DownloadData();
 
         //TODO
-        // Vyskusajte si spustenie asynctask ulohy s roznymi vykonavacmi Executors
+        // Vyskusajte si spustenie asynctask ulohy cez executorservice
 
         //Default single thread
         downloadData.execute(holder);
 
-        //ExecutorService executorService = Executors.newFixedThreadPool(4);
-
-        //ExecutorService executorService = Executors.newSingleThreadExecutor();
-
-        //ExecutorService executorService = Executors.newCachedThreadPool();
-
+        // spustenie cez executor
         //downloadData.executeOnExecutor(executorService,holder);
 
     }
